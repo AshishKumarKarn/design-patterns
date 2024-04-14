@@ -173,6 +173,6 @@ class Meal {
 
     @Override
     public String toString() {
-        return STR."Meal{breadSize=\{breadSize}, cheeseSlice=\{cheeseSlice}, softDrink='\{softDrink}\{'\''}, hasFries=\{hasFries}, hasEggs=\{hasEggs}\{'}'}";
+        return new StringBuilder().append("Meal{").append("breadSize=").append(breadSize).append(", cheeseSlice=").append(cheeseSlice).append(", softDrink='").append(softDrink).append('\'').append(", hasFries=").append(hasFries).append(", hasEggs=").append(hasEggs).append('}').toString();
     }
 }
