@@ -3,7 +3,7 @@ package com.karn.creational.builder;
  * Separate the construction of a complex object from its representation so that the
  * same construction process can create different representations
  * */
-public class Client {
+public class BuilderPatternClient {
     public static void main(String[] args) {
         Builder builder = new NonVegMealBuilder();
         MealDirector mealDirector = new MealDirector(builder);
