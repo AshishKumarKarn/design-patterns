@@ -22,11 +22,12 @@ class MealDirector {
     }
 
     public void prepareMeal() {
-        this.builder.addBread();
-        this.builder.addCheese();
-        this.builder.addSoftDrink();
-        this.builder.addFries();
-        this.builder.addEgg();
+        this.builder
+                .addBread()
+                .addCheese()
+                .addSoftDrink()
+                .addFries()
+                .addEgg();
     }
 
     /*
@@ -44,15 +45,15 @@ abstract class Builder {
     protected boolean hasFries;
     protected boolean hasEggs;
 
-    public abstract void addBread();
+    public abstract Builder addBread();
 
-    public abstract void addCheese();
+    public abstract Builder addCheese();
 
-    public abstract void addSoftDrink();
+    public abstract Builder addSoftDrink();
 
-    public abstract void addFries();
+    public abstract Builder addFries();
 
-    public abstract void addEgg();
+    public abstract Builder addEgg();
 
     public abstract Meal build();
 }
@@ -60,28 +61,33 @@ abstract class Builder {
 class VegMealBuilder extends Builder {
 
     @Override
-    public void addBread() {
+    public Builder addBread() {
         this.breadSize = 12;
+        return this;
     }
 
     @Override
-    public void addCheese() {
+    public Builder addCheese() {
         this.cheeseSlice = 2;
+        return this;
     }
 
     @Override
-    public void addSoftDrink() {
+    public Builder addSoftDrink() {
         this.softDrink = "Coke";
+        return this;
     }
 
     @Override
-    public void addFries() {
+    public Builder addFries() {
         this.hasFries = true;
+        return this;
     }
 
     @Override
-    public void addEgg() {
+    public Builder addEgg() {
         this.hasEggs = false;
+        return this;
     }
 
     @Override
@@ -93,28 +99,33 @@ class VegMealBuilder extends Builder {
 class NonVegMealBuilder extends Builder {
 
     @Override
-    public void addBread() {
+    public Builder addBread() {
         this.breadSize = 16;
+        return this;
     }
 
     @Override
-    public void addCheese() {
+    public Builder addCheese() {
         this.cheeseSlice = 2;
+        return this;
     }
 
     @Override
-    public void addSoftDrink() {
+    public Builder addSoftDrink() {
         this.softDrink = "Coke";
+        return this;
     }
 
     @Override
-    public void addFries() {
+    public Builder addFries() {
         this.hasFries = true;
+        return this;
     }
 
     @Override
-    public void addEgg() {
+    public Builder addEgg() {
         this.hasEggs = true;
+        return this;
     }
 
     @Override
@@ -127,28 +138,33 @@ class NonVegMealBuilder extends Builder {
 class MacChickenMaharajaMealBuilder extends Builder {
 
     @Override
-    public void addBread() {
+    public Builder addBread() {
         this.breadSize = 18;
+        return this;
     }
 
     @Override
-    public void addCheese() {
+    public Builder addCheese() {
         this.cheeseSlice = 2;
+        return this;
     }
 
     @Override
-    public void addSoftDrink() {
+    public Builder addSoftDrink() {
         this.softDrink = "Coke";
+        return this;
     }
 
     @Override
-    public void addFries() {
+    public Builder addFries() {
         this.hasFries = true;
+        return this;
     }
 
     @Override
-    public void addEgg() {
+    public Builder addEgg() {
         this.hasEggs = true;
+        return this;
     }
 
     @Override
