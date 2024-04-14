@@ -8,7 +8,7 @@ public class Client {
         Builder builder = new NonVegMealBuilder();
         MealDirector mealDirector = new MealDirector(builder);
         mealDirector.prepareMeal();
-        Meal meal = mealDirector.getMeal();
+        Meal meal = builder.build();
         System.out.println(meal);
     }
 }
@@ -28,9 +28,11 @@ class MealDirector {
         this.builder.addEgg();
     }
 
+    /*
     public Meal getMeal() {
         return this.builder.build();
     }
+    */
 }
 
 abstract class Builder {
