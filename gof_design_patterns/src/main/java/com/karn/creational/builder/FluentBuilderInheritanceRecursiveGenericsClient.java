@@ -9,10 +9,14 @@ class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", position='" + position + '\'' +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        return sb.append("Person{")
+                .append("name='")
+                .append(name)
+                .append("', position='")
+                .append(position)
+                .append("'}").toString();
+
     }
 }
 
